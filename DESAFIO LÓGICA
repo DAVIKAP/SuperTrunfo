@@ -17,7 +17,9 @@ int main() {
     float Densidade2 = (float) Populacao2 / Area2;
     float PIBCapita1 = (float) PIB1 / Populacao1;
     float PIBCapita2 = (float) PIB2 / Populacao2;
-  
+    int atributoComp;
+
+    
   // Área para entrada de dados
 
     printf("Carta 1: \n");
@@ -109,6 +111,65 @@ int main() {
 
     // Área de comparação das Cartas:
     
+    printf("Digite o número do atributo que deseja comparar: \n");
+    printf("1. População\n");
+    printf("2. Àrea\n");
+    printf("3. PIB\n");
+    printf("4. Número de pontos turísticos\n");
+    printf("5. Densidade populacional\n");
+    printf("6. PIB per capita\n");
+    scanf("%d", atributoComp);
+
+    switch (atributoComp) {
+      case 1:
+        If(Populacao1 > Populacao2) {
+          printf("Os países digitados foram: %s e %s\n", Estado1, Estado2);
+          printf("Atributo comparado: População carta 1 e População carta 2\n");
+          printf("A População da carta 1 é %d e a População da certa 2 %d\n", Populacao1, Populacao2);
+          printf("A carta 1 venceu!");
+        } else if (Populacao1 < Populacao2) {
+          printf("Os países digitados foram: %s e %s\n", Estado1, Estado2);
+          printf("Atributo comparado: População carta 1 e População carta 2\n");
+          printf("A População da carta 1 é %d e a População da certa 2 %d\n", Populacao1, Populacao2);
+          printf("A carta 2 venceu!");
+        } else {
+          printf("Os países digitados foram: %s e %s\n", Estado1, Estado2);
+          printf("Atributo comparado: População carta 1 e População carta 2\n");
+          printf("A População da carta 1 é %d e a População da certa 2 %d\n", Populacao1, Populacao2);
+          printf("Empate!");
+        }
+      break;
+
+      case 2:
+        If(Area1 > Area2) {
+          printf("Os países digitados foram: %s e %s\n", Estado1, Estado2);
+          printf("Atributo comparado: Área carta 1 e Área carta 2\n");
+          printf("A Área da carta 1 é %f e a Área da certa 2 %f\n", Area1, Area2);
+          printf("A carta 1 venceu!");
+        } else if (Area1 < Area2) {
+          printf("Os países digitados foram: %s e %s\n", Estado1, Estado2);
+          printf("Atributo comparado: Área carta 1 e Área carta 2\n");
+          printf("A Área da carta 1 é %f e a Área da certa 2 %f\n", Area1, Area2);
+          printf("A carta 2 venceu!");
+        } else {
+          printf("Os países digitados foram: %s e %s\n", Estado1, Estado2);
+          printf("Atributo comparado: Área carta 1 e Área carta 2\n");
+          printf("A Área da carta 1 é %f e a Área da certa 2 %f\n", Area1, Area2);
+          printf("Empate!");
+          break;
+        }
+    }
+
+
+    
+/*
+O nome dos dois países.
+O atributo usado na comparação.
+Os valores do atributo para cada carta.
+Qual carta venceu.
+Em caso de empate, exibir a mensagem "Empate!".
+*/
+
     printf("Comparação de cartas (Atributo População): \n");
 
     printf("População da carta 1: %d\n", Populacao1);
